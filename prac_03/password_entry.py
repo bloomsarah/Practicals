@@ -1,11 +1,22 @@
-MIN_LENGTH = 10
+def main():
 
-password = input("Enter a password: ")
+    password = get_password()
 
-if len(password) < MIN_LENGTH:
-    print("Invalid password!")
-    password = input("Enter a password: ")
-else:
+    print_asterisks(password)
+
+
+def print_asterisks(password):
     for char in password:
         print('*', end=' ')
-print()
+
+
+def get_password():
+    min_length = 10
+    password = input("Enter a password: ")
+    if len(password) < min_length:
+        print("Invalid password!")
+        password = input("Enter a password: ")
+    return password
+
+
+main()
