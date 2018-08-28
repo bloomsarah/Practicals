@@ -9,6 +9,8 @@ STATE_NAMES = {"QLD": "Queensland", "NSW": "New South Wales", "NT": "Northern Te
                "ACT": "Australian Capital Territory", "VIC": "Victoria", "TAS": "Tasmania"}
 # print(STATE_NAMES)
 # how to format print one value then another?
+for key, value in STATE_NAMES.items():
+    print(key, "is", value)
 
 state = input("Enter short state: ").upper()
 while state != "":
