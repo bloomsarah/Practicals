@@ -10,8 +10,8 @@ HEX_COLORS = {"goldenrod1": "#ffc125", "AliceBlue": "#f0f8ff", "DarkOliveGreen3"
               "DarkOrchid": "#9932cc"}
 print("Color options are: ")
 
-for i in HEX_COLORS:
-    print(i)
+for key in HEX_COLORS:
+    print(key)
 
 color = input("Enter color for hex code: ")
 
