@@ -5,11 +5,15 @@
 #Entering an invalid colour name should not crash.
 #Allow the user to enter names until they enter a blank one to stop the loop
 
-HEX_COLORS = {"goldenrod1": "ffc125", "AliceBlue": "f0f8ff", "DarkOliveGreen3": "a2cd5a", "coral": "ff7f50",
-              "burlywood2": "eec591", "blue4": "0008b", "firebrick": "b22222", "cornsilk2": "eee8cd", "FloralWhite": "fffaf0",
-              "DarkOrchid": "9932cc"}
+HEX_COLORS = {"goldenrod1": "#ffc125", "AliceBlue": "#f0f8ff", "DarkOliveGreen3": "#a2cd5a", "coral": "#ff7f50",
+              "burlywood2": "#eec591", "blue4": "#0008b", "firebrick": "#b22222", "cornsilk2": "#eee8cd", "FloralWhite": "#fffaf0",
+              "DarkOrchid": "#9932cc"}
+print("Color options are: ")
 
-color = input("Enter color: ")
+for i in HEX_COLORS:
+    print(i)
+
+color = input("Enter color for hex code: ")
 
 while color != "":
     if color in HEX_COLORS:
@@ -18,4 +22,4 @@ while color != "":
         print("Color not listed.")
     color = input("Enter color: ")
 
-#WANT TO PRINT ALL COLOR OPTIONS AT START! how?
+
