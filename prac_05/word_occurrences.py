@@ -1,7 +1,8 @@
-"""Program to take string input and count occurrences of each word
-Sarah Bloom
-Prac_05
-3/9/18"""
+# Make program to count the occurrences of words in a string
+# ask user for a string
+# print counts of how many of each word in the file
+# use a dictionary where keys are words and values are counts
+
 word_to_count = {}
 
 words = input("Text: ")
