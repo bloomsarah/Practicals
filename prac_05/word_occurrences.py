@@ -13,7 +13,4 @@ for word in words:
     else:
         word_to_count[word] = 1
 for key, value in word_to_count.items():
-    print("Word: ", key, "appears", value, "times.")
-
-
-#This is currently counting each letter as it's own word yikes how to fix??
+    print("{} : {:}".format(key, value))
