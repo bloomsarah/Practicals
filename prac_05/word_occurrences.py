@@ -5,12 +5,12 @@
 
 word_to_count = {}
 
-words = input("Text: ")
+words = input("Text: ").split(' ')
 
 for word in words:
     if word in word_to_count:
         word_to_count[word] += 1
     else:
         word_to_count[word] = 1
-for key, value in word_to_count.items():
-    print("{} : {:}".format(key, value))
+for key, value in sorted(word_to_count.items()):
+    print("{} : {}".format(key, value))
