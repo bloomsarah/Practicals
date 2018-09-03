@@ -1,6 +1,5 @@
 """Program to take string input and count occurrences of each word
 Sarah Bloom
-Prac_05
 3/9/18"""
 word_to_count = {}
 
