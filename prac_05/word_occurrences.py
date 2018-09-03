@@ -14,6 +14,6 @@ for word in words:
         word_to_count[word] = 1
 
 for key, value in sorted(word_to_count.items()):
-    print("{:{} : {}}".format(key, value))
+    print("{} : {}".format(key, value))
 
 
