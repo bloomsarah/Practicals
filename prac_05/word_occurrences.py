@@ -3,13 +3,11 @@ Sarah Bloom
 3/9/18"""
 word_to_count = {}
 
-words = input("Text: ")
+words = input("Text: ").split(' ')
 
 for word in words:
-    if word in word_to_count:
-        word_to_count[word] += 1
-    else:
-        word_to_count[word] = 1
+    frequency = word_to_count.get(word, 0)
+    word_to_count[word] = frequency + 1
 
 for key, value in sorted(word_to_count.items()):
     print("{} : {}".format(key, value))
