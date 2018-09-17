@@ -10,6 +10,11 @@ class ProgrammingLanguage:
         self.reflection = reflection
         self.year = year
 
+    def __str__(self):
+        return "{}, {} Typing, Reflection={}, First appeared in {}".format(self.name.capitalize(),
+                                                                           self.typing.capitalize(), self.reflection,
+                                                                           self.year)
+
     def is_dynamic(self):
         if typing.lower() == dynamic:
             dynamic_boolean = True
