@@ -1,5 +1,7 @@
 """Guitar class to store one guitar with several fields of information"""
 
+CURRENT_YEAR = 2018
+VINTAGE_AGE = 50
 
 class Guitar:
 
@@ -9,15 +11,15 @@ class Guitar:
         self.cost = cost
 
     def __str__(self):
-        return "{} ({}) : ${:.2f}".format(self.name, self.year, self.cost)
+        return "{} ({}) : ${:,.2f}".format(self.name, self.year, self.cost)
 
     def get_age(self):
-        age = 2018 - self.year
-        return "Age: {} years".format(age)
+        return CURRENT_YEAR - self.year
 
     def is_vintage(self):
-        if age >= 50:
-            vintage = True
-        else:
-            vintage = False
-        return "Vintage: {}".format(vintage)
+        return self.get_age() >= VINTAGE_AGE
+
+    def __lt__(self, other):
+        """ Sorting guitars by year released"""
+        return self.year < other.year
+    
