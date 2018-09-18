@@ -16,9 +16,4 @@ class ProgrammingLanguage:
                                                                            self.year)
 
     def is_dynamic(self):
-        if typing.lower() == dynamic:
-            dynamic_boolean = True
-        else:
-            dynamic_boolean = False
-        return dynamic_boolean
-
+        return self.typing.lower() == 'dynamic'
