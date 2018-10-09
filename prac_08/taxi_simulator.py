@@ -37,7 +37,7 @@ def main():
 
 
 def display_taxis(taxis):
-    for i, taxi in enumerate(taxis)
+    for i, taxi in enumerate(taxis):
         print("{} - {}".format(i, str(taxi)))
 
 
