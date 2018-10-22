@@ -22,7 +22,7 @@ def main():
     try:
         os.mkdir('temp')
     except FileExistsError:
-        pass
+        print("File exists error.")
 
     # Loop through each file in the (current) directory
     for filename in os.listdir('.'):
@@ -61,6 +61,5 @@ def demo_walk():
             full_name = os.path.join(directory_name, filename)
             new_name = os.path.join(directory_name, get_fixed_filename(filename))
             os.rename(full_name, new_name)
-
-main()
-# demo_walk()
+#main()
+demo_walk()
