@@ -43,14 +43,20 @@ def get_fixed_filename(filename):
         elif char.islower():
             if filename[i-1] == ' ':
                 new_name += char.upper()
-            #elif filename[i+1].isupper():
-                #new_name += '_'
             else:
                 new_name += char
         else:
-            new_name += char
+            if i != 0:
+                if filename[i-1].islower():
+                    new_name += '_'
+                    new_name += char
+                else:
+                    new_name += char
+            else:
+                new_name += char
+    new_name = new_name.replace(".TXT", ".txt")
     print("New name:", new_name)
-    # return new_name
+    return new_name
     # new_name = filename.replace(" ", "_").replace(".TXT", ".txt")
     # return new_name
 
