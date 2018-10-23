@@ -36,8 +36,23 @@ def main():
 
 def get_fixed_filename(filename):
     """Return a 'fixed' version of filename."""
-    new_name = filename.replace(" ", "_").replace(".TXT", ".txt")
-    return new_name
+    new_name = """"""
+    for i, char in enumerate(filename):
+        if char == ' ':
+            new_name += '_'
+        elif char.islower():
+            if filename[i-1] == ' ':
+                new_name += char.upper()
+            #elif filename[i+1].isupper():
+                #new_name += '_'
+            else:
+                new_name += char
+        else:
+            new_name += char
+    print("New name:", new_name)
+    # return new_name
+    # new_name = filename.replace(" ", "_").replace(".TXT", ".txt")
+    # return new_name
 
 
 def demo_walk():
@@ -49,9 +64,11 @@ def demo_walk():
         print("\tand files:", filenames)
         print("(Current working directory is: {})".format(os.getcwd()))
 
-        for filename in filenames:
-            full_name = os.path.join(directory_name, filename)
-            new_name = os.path.join(directory_name, get_fixed_filename(filename))
-            os.rename(full_name, new_name)
-#main()
-demo_walk()
+        # for filename in filenames:
+        # full_name = os.path.join(directory_name, filename)
+        #   new_name = os.path.join(directory_name, get_fixed_filename(filename))
+        #  os.rename(full_name, new_name)
+
+
+main()
+# demo_walk()
