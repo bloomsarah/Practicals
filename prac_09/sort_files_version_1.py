@@ -23,6 +23,7 @@ for extension in extensions_set:
 for filename in os.listdir('.'):
     p = "{}/{}".format(os.getcwd(), filename)
     extension = os.path.splitext(p)
-    if extension[1]
+    if extension[1]:
+        pass
 
 
